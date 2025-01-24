@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 <template>
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
-        <div class="py-12">
+        <div class="py-5">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                     <div id="default-carousel" class="relative w-full" data-carousel="slide">
@@ -37,7 +37,7 @@ onMounted(() => {
 
                             <!-- Item 3 -->
                             <div :class="['duration-700 ease-in-out', currentSlide === 2 ? 'block' : 'hidden']" data-carousel-item>
-                                <img src="/img/kim.jpg" class="block w-1/3 h-1/3 object-cover" alt="KIM">
+                                <img src="/img/bmw.jpg" class="block w-full h-full object-cover" alt="BMW">
                             </div>
                         </div>
 

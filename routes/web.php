@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+/*
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -13,31 +14,45 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+*/
+
+Route::get('/', function () {
+    return Inertia::render('LandingPage/Home');
+});
+
+Route::get('/about-us', function () {
+    return Inertia::render('LandingPage/AboutUs');
+});
+
+Route::get('/about-us', function () {
+    return Inertia::render('Admin/AboutUs');
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+/*soon to be admin
 Route::get('/about-us', function () {
-    return Inertia::render('AboutUs');
+    return Inertia::render('Admin/AboutUs');
 })->middleware(['auth', 'verified'])->name('AboutUs');
 
 Route::get('/connect-with-us', function () {
-    return Inertia::render('ConnectwithUs');
+    return Inertia::render('Admin/ConnectwithUs');
 })->middleware(['auth', 'verified'])->name('connect-with-us');
 
 Route::get('/join-us', function () {
-    return Inertia::render('JoinUs');
+    return Inertia::render('Admin/JoinUs');
 })->middleware(['auth', 'verified'])->name('join-us');
 
 Route::get('/products', function () {
-    return Inertia::render('Products');
+    return Inertia::render('Admin/Products');
 })->middleware(['auth', 'verified'])->name('Products');
 
 Route::get('/talk-to-us', function () {
-    return Inertia::render('TalktoUs');
+    return Inertia::render('Admin/TalktoUs');
 })->middleware(['auth', 'verified'])->name('TalktoUs');
-
+*/
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
