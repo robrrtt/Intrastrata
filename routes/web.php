@@ -24,9 +24,7 @@ Route::get('/about-us', function () {
     return Inertia::render('LandingPage/AboutUs');
 });
 
-Route::get('/about-us', function () {
-    return Inertia::render('Admin/AboutUs');
-});
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

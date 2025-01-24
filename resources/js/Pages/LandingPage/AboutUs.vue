@@ -17,7 +17,7 @@ import Carousell from "@/Components/carousell.vue";
                         <h1
                             class="text-4xl font-extrabold leading-tight text-gray-800 uppercase"
                         >
-                            Intrastrata Assurance Corporation
+                            Intrastrata Assurance Corporationsss
                         </h1>
                     </div>
                 </div>
