@@ -13,7 +13,6 @@ import Header from "@/Components/Header.vue";
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                 <Carousell />
             </div>
-
             <div class="flex items-center justify-center">
                 <div class="text-white p-4">
                     <h1

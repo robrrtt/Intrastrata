@@ -22,9 +22,22 @@ Route::get('/', function () {
 
 Route::get('/about-us', function () {
     return Inertia::render('LandingPage/AboutUs');
-});
+}); 
 
+Route::get('/join-us', function () {
+    return Inertia::render('LandingPage/JoinUs');
+}); 
 
+Route::get('/connect-with-us', function () {
+    return Inertia::render('LandingPage/ConnectwithUs');
+}); 
+
+Route::get('/products', function () {
+    return Inertia::render('LandingPage/Products');
+}); 
+Route::get('/talk-to-us', function () {
+    return Inertia::render('LandingPage/TalktoUs');
+}); 
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
