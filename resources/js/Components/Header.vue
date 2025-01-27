@@ -10,8 +10,8 @@ const isActive = (path) => computed(() => currentUrl.value.startsWith(path));
 </script>
 
 <template>
-    <nav class="flex items-center justify-between flex-wrap bg-gray-50 p-8 sticky">
-        <div class="flex items-center flex-shrink-0 text-black mr-6">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-50 p-4  ">
+        <div class="flex items-center flex-shrink-0 text-black ml-10">
             <img src="/img/small.png" class="w-48">
         </div>
         <div class="block lg:hidden">
