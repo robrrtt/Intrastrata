@@ -17,7 +17,7 @@ Route::get('/', function () {
 */
 
 Route::get('/', function () {
-    return Inertia::render('LandingPage/Home');
+    return Inertia::render('LandingPage/AboutUs');
 });
 
 Route::get('/about-us', function () {
