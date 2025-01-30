@@ -18,14 +18,14 @@ const toggleMenu = () => {
 </script>
 
 <template>
-    <nav class="flex items-center justify-between flex-wrap bg-gray-50 p-4">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-50 p-4 sticky top-0 z-50 bg-white shadow-md">
         <div class="flex items-center flex-shrink-0 text-black">
             <img src="/img/small.png" class="w-48">
         </div>
         <div class="block lg:hidden">
             <button 
                 @click="toggleMenu" 
-                class="flex items-center px-3 py-2 border rounded text-amber-200 border-amber-400 hover:text-amber hover:border-amber transition duration-400"
+                class="flex items-center px-3 py-2 border rounded text-slate-400 border-slate-400 hover:text-slate hover:border-amber transition duration-400"
             >
                 <svg 
                     :class="['fill-current h-3 w-3 transform transition-transform duration-400', isMenuOpen ? 'rotate-90' : 'rotate-0']" 
@@ -48,31 +48,31 @@ const toggleMenu = () => {
             <div class="lg:flex ">
                 <Link 
                     href="/about-us" 
-                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-4', isActive('/about-us').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
+                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-10', isActive('/about-us').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
                 >
                     Who We Are
                 </Link>
                 <Link 
                     href="/products" 
-                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-4', isActive('/products').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
+                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-10', isActive('/products').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
                 >
                     Products
                 </Link>
                 <Link 
                     href="/connect-with-us" 
-                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-4', isActive('/connect').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
+                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-10', isActive('/connect').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
                 >
                     Connect With Us
                 </Link>
                 <Link 
                     href="/join-us" 
-                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-4', isActive('/join-us').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
+                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-10', isActive('/join-us').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
                 >
                     Join Us
                 </Link>
                 <Link 
                     href="/talk-to-us" 
-                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-4', isActive('/contact').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
+                    :class="['block mt-4 lg:inline-block lg:mt-0 mr-10', isActive('/contact').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']"
                 >
                     Talk To Us
                 </Link>

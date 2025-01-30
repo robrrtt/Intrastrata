@@ -1,24 +1,23 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import Header from "@/Components/Header.vue";
 import { Head } from "@inertiajs/vue3";
+import Footer from "@/Components/footer.vue";
+import Carousell from "@/Components/carousell.vue";
+import ProductsPage from "@/Components/ProductsPage.vue";
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured } from '@fortawesome/free-solid-svg-icons';
+
 </script>
 
 <template>
      <Header />
 
 <Head title="Product" />
-
-
-    <div class="py-12">
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div
-                class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
-            >
-                <div class="p-6 text-gray-900">
-                    Product
-                </div>
-            </div>
+<div class="mx-auto max-w-screen ">
+            <ProductsPage/>
+          
         </div>
-    </div>
+    <Footer />
 </template>
