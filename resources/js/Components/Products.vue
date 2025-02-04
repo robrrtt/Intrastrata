@@ -14,7 +14,8 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
 </script>
 
 <template>
-    <div class="border border-red-600 p-4">
+    <!--<div class="border border-red-600 p-4"> -->
+        <div>
         <h1 class="text-lg md:text-2xl font-extrabold text-gray-800 uppercase text-center">
             Product We Offer
         </h1>
