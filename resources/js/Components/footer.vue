@@ -44,7 +44,7 @@
         </div>
         <hr class="my-6 border-gray-700" />
         <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <span class="text-sm text-gray-400">&copy; 2024 Intrastrata Assurance Corporation. All rights
+            <span class="text-sm text-gray-400">&copy; 2025 Intrastrata Assurance Corporation. All rights
                 reserved.</span>
             <div class="flex space-x-6 mt-4 sm:mt-0">
                 <a href="#" class="text-gray-400 hover:text-white">

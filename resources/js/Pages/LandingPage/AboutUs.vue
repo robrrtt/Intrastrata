@@ -17,20 +17,21 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
 <template>
     <Header />
     <Head title="AboutUs" />
-    <div>
+        
         <div class="mx-auto max-w-screen ">
             <div class="overflow-hidden bg-white">
                 <Carousell />
             </div>
-            <div class="flex items-center justify-center">
-                <div class="flex flex-col">
-                    <h1
-                        class="text-xl md:text-4xl lg:text-4xl font-extrabold leading-tight text-Slate-800 uppercase text-center mx-auto w-fit p-6">
-                        Intrastrata Assurance Corporation
+            <div class="flex items-center justify-center  p-6 w-full">
+                <div class="flex flex-col w-full text-center">
+                    <h1 class="text-3xl font-extrabold leading-tight tracking-tight text-slate-800 md:text-3xl lg:text-6xl dark:text-slate-800 uppercase">
+                    Intrastrata Assurance Corporation
                     </h1>
                 </div>
             </div>
-            <Products />
+
+
+            <Products class="p-10"/>
             <!--<div class="border border-red-600 p-4">-->
                 <div>
                 <h1 class="text-lg md:text-2xl font-extrabold text-Slate-800 uppercase text-center mt-4">
@@ -61,6 +62,5 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
                 </div>
             </div>
         </div>
-    </div>
     <Footer />
 </template>

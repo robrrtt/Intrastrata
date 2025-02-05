@@ -17,7 +17,7 @@ Route::get('/', function () {
 */
 
 Route::get('/', function () {
-    return Inertia::render('LandingPage/AboutUs');
+    return Inertia::render('LandingPage/Home');
 });
 
 Route::get('/about-us', function () {
@@ -28,8 +28,8 @@ Route::get('/join-us', function () {
     return Inertia::render('LandingPage/JoinUs');
 }); 
 
-Route::get('/connect-with-us', function () {
-    return Inertia::render('LandingPage/ConnectwithUs');
+Route::get('/Claims', function () {
+    return Inertia::render('LandingPage/Claims');
 }); 
 
 Route::get('/products', function () {

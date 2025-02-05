@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 // State for managing the current slide
 const currentSlide = ref(0);
-const totalSlides = 3; // Total number of slides
+const totalSlides = 4; // Total number of slides
 
 // Function to go to the next slide
 const nextSlide = () => {
@@ -18,7 +18,7 @@ const goToSlide = (index) => {
 // Auto-slide interval
 let interval;
 onMounted(() => {
-    interval = setInterval(nextSlide, 3500); // Change image every 3.5 seconds
+    interval = setInterval(nextSlide, 4000); // Change image every 3.5 seconds
 });
 
 onUnmounted(() => {
@@ -29,10 +29,10 @@ onUnmounted(() => {
     <div class="relative w-screen">
         <div class="overflow-hidden bg-white shadow-sm">
             <!-- Carousel Wrapper (Full Width) -->
-            <div class="relative w-screen h-[35vh] md:h-[65vh] overflow-hidden">
+            <div class="relative w-screen h-[40vh] md:h-[70vh] overflow-hidden">
                 <!-- Slide Items -->
                 <div
-                    v-for="(image, index) in ['/img/bmw.jpg', '/img/fire.jpg', '/img/bonds.png']"
+                    v-for="(image, index) in ['/img/ss.jpg', '/img/motorcar.jpg', '/img/bonds.jpg', '/img/cargo.jpg']"
                     :key="index"
                     :class="[
                         'absolute inset-0 transition-opacity duration-700 ease-in-out h-full',
