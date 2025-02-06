@@ -47,16 +47,16 @@ const selectClaim = (claim) => {
   <Header />
 
   <!-- Hero Section -->
-  <section class="bg-gray-900 text-white text-center py-16">
+  <section class="bg-slate-900 text-white text-center py-10">
     <h1 class="text-5xl font-bold">Claims</h1>
-    <p class="mt-3 text-lg text-gray-300">Select a claim type to view details and requirements</p>
+    <p class="mt-2 text-lg text-gray-300">Select a claim type to view details and requirements</p>
   </section>
 
   <!-- Claims Section -->
-  <div class="container mx-auto px-6 py-12">
+  <div class="container mx-auto px-3 py-5 border border-red-600">
 
     <!-- Claim List -->
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-wrap justify-center gap-2">
       <div 
         v-for="claim in claims" 
         :key="claim.name" 
@@ -91,3 +91,4 @@ const selectClaim = (claim) => {
 
   <Footer />
 </template>
+

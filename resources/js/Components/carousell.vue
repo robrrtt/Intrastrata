@@ -32,7 +32,7 @@ onUnmounted(() => {
             <div class="relative w-screen h-[40vh] md:h-[70vh] overflow-hidden">
                 <!-- Slide Items -->
                 <div
-                    v-for="(image, index) in ['/img/ss.jpg', '/img/motorcar.jpg', '/img/bonds.jpg', '/img/cargo.jpg']"
+                    v-for="(image, index) in ['/img/nyc.jpg', '/img/motorcar.jpg', '/img/bonds.jpg', '/img/cargo.jpg']"
                     :key="index"
                     :class="[
                         'absolute inset-0 transition-opacity duration-700 ease-in-out h-full',

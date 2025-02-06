@@ -27,10 +27,11 @@ const submitForm = () => {
     <Head title="Talk to Us" />
 
     <!-- Hero Section -->
-    <div class="bg-slate-900 text-white text-center py-16">
+    <div class="bg-slate-900 text-white text-center py-10">
         <h1 class="text-5xl font-bold">Talk to Us</h1>
-        <p class="mt-3 text-lg text-slate-300">We’re here to help. Get in touch with us today.</p>
+        <p class="mt-2 text-lg text-slate-300">We’re here to help. Get in touch with us today.</p>
     </div>
+
 
     <!-- Contact Form Section -->
     <div class="max-w-3xl mx-auto bg-white shadow-md border border-slate-200 p-8 rounded-lg mt-12">

@@ -40,10 +40,11 @@ const submitForm = () => {
     <Head title="Join Us" />
 
     <!-- Hero Section -->
-    <div class="bg-slate-900 text-white text-center py-16">
+
+    <section class="bg-slate-900 text-white text-center py-10">
         <h1 class="text-5xl font-bold">Join Our Team</h1>
-        <p class="mt-3 text-lg text-slate-300">Start your career with Intrastrata Non-Life Insurance today.</p>
-    </div>
+        <p class="mt-2 text-lg text-slate-300">Select a claim type to view details and requirements</p>
+  </section>
 
     <!-- Careers Section -->
     <div class="max-w-6xl mx-auto px-6 py-12">

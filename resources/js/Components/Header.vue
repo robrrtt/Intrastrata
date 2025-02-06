@@ -65,9 +65,9 @@ const toggleAboutUs = () => {
                     'md:flex': true,
                     'items-center font-medium w-full md:w-auto md:order-1': true,
                     }" id="mega-menu-full">
-                <div class="flex flex-col md:flex-row md:space-x-10">
+                <div class="flex flex-col md:flex-row md:space-x-8 text-lg font-[1000]">
                     <Link href="/"
-                        :class="['block py-2 px-3 md:p-0', isActive('/Home').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
+                        :class="['block py-2 px-3 md:p-0', isActive('/Home').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold' ]">
                         Home
                     </Link>
                     <div class="relative">

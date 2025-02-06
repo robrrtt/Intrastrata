@@ -16,6 +16,7 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
 
 <template>
     <Header />
+
     <Head title="AboutUs" />
         
         <div class="mx-auto max-w-screen ">
@@ -29,8 +30,6 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
                     </h1>
                 </div>
             </div>
-
-
             <Products class="p-10"/>
             <!--<div class="border border-red-600 p-4">-->
                 <div>
