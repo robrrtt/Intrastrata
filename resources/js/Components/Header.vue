@@ -155,22 +155,23 @@ const toggleAboutUs = () => {
             class="mt-1 border-gray-200 shadow-xs bg-white-200 md:bg-white border-y">
             <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
                 <ul>
-                    <Link>
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                    
+                    <Link href="/products/MotorCar">
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
                             <div class="font-semibold">Motorcar</div>
                             
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>
                     </Link>
-                    <Link>
+                    <Link href="/products/Fire">
                         <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
                             <div class="font-semibold">Fire & Allied Perils </div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>
                     </Link>
-                    <Link>
+                    <Link href="/products/Bonds">
                         <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
                             <div class="font-semibold">Bonds</div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
@@ -179,22 +180,22 @@ const toggleAboutUs = () => {
                     </Link>
                 </ul>
                 <ul> 
-                    <Link>
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                    <Link href="/products/MarineLines">
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
                             <div class="font-semibold">Marine Lines</div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>
-                    </Link>
-                    <Link>
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                    </Link> 
+                    <Link href="/products/EngineeringLines">        
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
                             <div class="font-semibold">Engineering Lines</div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>
                     </Link>
-                    <Link>
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                    <Link href="/products/Casualty">
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
                             <div class="font-semibold">Casualty Lines</div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>

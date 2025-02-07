@@ -48,6 +48,30 @@ Route::get('/about-us/CompanyProfile', function () {
     return Inertia::render('AboutUs/CompanyProfile');
 }); 
 
+//Product Us Route
+Route::get('/products/MotorCar', function () {
+    return Inertia::render('Products/MotorCar');
+}); 
+Route::get('/products/Fire', function () {
+    return Inertia::render('Products/Fire');
+}); 
+
+Route::get('/products/Bonds', function () {
+    return Inertia::render('Products/Bonds');
+}); 
+
+Route::get('/products/MarineLines', function () {
+    return Inertia::render('Products/Marine');
+}); 
+
+Route::get('/products/EngineeringLines', function () {
+    return Inertia::render('Products/Engineering');
+}); 
+
+Route::get('/products/Casualty', function () {
+    return Inertia::render('Products/Casualty');
+}); 
+
 /*soon to be admin
 Route::get('/about-us', function () {
     return Inertia::render('Admin/AboutUs');
