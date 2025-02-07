@@ -43,6 +43,11 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+//About Us Route
+Route::get('/about-us/CompanyProfile', function () {
+    return Inertia::render('AboutUs/CompanyProfile');
+}); 
+
 /*soon to be admin
 Route::get('/about-us', function () {
     return Inertia::render('Admin/AboutUs');

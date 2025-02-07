@@ -26,6 +26,7 @@
         "@headlessui/vue": "^1.7.23",
         "@tailwindcss/vite": "^4.0.0",
         "flowbite": "^3.0.0",
-        "flowbite-vue": "^0.1.7"
+        "flowbite-vue": "^0.1.7",
+        "framer-motion": "^12.3.1"
     }
 }

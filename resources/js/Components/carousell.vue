@@ -5,6 +5,14 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const currentSlide = ref(0);
 const totalSlides = 4; // Total number of slides
 
+// Slide data with images and CTA content
+const slides = ref([
+    { image: '/img/nyc.jpg', title: 'Fire & Allied Perils ', buttonText: 'Learn More', link: '/nyc' },
+    { image: '/img/motorcar.jpg', title: 'MotorCar', buttonText: 'View Cars', link: '/cars' },
+    { image: '/img/bonds.jpg', title: 'Investment Bonds', buttonText: 'Get Started', link: '/bonds' },
+    { image: '/img/cargo.jpg', title: 'Marine', buttonText: 'See More', link: '/cargo' }
+]);
+
 // Function to go to the next slide
 const nextSlide = () => {
     currentSlide.value = (currentSlide.value + 1) % totalSlides;
@@ -18,28 +26,37 @@ const goToSlide = (index) => {
 // Auto-slide interval
 let interval;
 onMounted(() => {
-    interval = setInterval(nextSlide, 4000); // Change image every 3.5 seconds
+    interval = setInterval(nextSlide, 4000); // Change image every 4 seconds
 });
 
 onUnmounted(() => {
     clearInterval(interval); // Cleanup to prevent memory leaks
 });
 </script>
+
 <template>
     <div class="relative w-screen">
         <div class="overflow-hidden bg-white shadow-sm">
-            <!-- Carousel Wrapper (Full Width) -->
+            <!-- Carousel Wrapper -->
             <div class="relative w-screen h-[40vh] md:h-[70vh] overflow-hidden">
                 <!-- Slide Items -->
                 <div
-                    v-for="(image, index) in ['/img/nyc.jpg', '/img/motorcar.jpg', '/img/bonds.jpg', '/img/cargo.jpg']"
+                    v-for="(slide, index) in slides"
                     :key="index"
                     :class="[
                         'absolute inset-0 transition-opacity duration-700 ease-in-out h-full',
                         currentSlide === index ? 'opacity-100' : 'opacity-0'
                     ]"
                 >
-                    <img :src="image" class="block w-full h-full object-cover" :alt="'Slide ' + (index + 1)">
+                    <img :src="slide.image" class="block w-full h-full object-cover" :alt="'Slide ' + (index + 1)">
+                    
+                    <!-- CTA Overlay -->
+                    <div v-if="currentSlide === index" class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white text-center px-6 md:px-12">
+                        <h2 class="text-3xl md:text-5xl font-bold drop-shadow-lg">{{ slide.title }}</h2>
+                        <a :href="slide.link" class="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-lg shadow-md transition">
+                            {{ slide.buttonText }}
+                        </a>
+                    </div>
                 </div>
             </div>
 

@@ -15,8 +15,8 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
 
 <template>
     <!--<div class="border border-red-600 p-4"> -->
-        <div>
-        <h1 class="text-lg md:text-2xl font-extrabold text-gray-800 uppercase text-center">
+        <div class="border border-red-900 bg-gray-200">
+        <h1 class="text-lg md:text-3xl font-extrabold text-gray-800 uppercase text-center">
             Product We Offer
         </h1>
         

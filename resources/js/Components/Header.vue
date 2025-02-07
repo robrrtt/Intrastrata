@@ -47,9 +47,12 @@ const toggleAboutUs = () => {
 </script>
 
 <template>
-    <nav class="bg-white border-white-200 sticky top-0 z-50 ">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-            <img src="/img/Intrastrata-final.gif" class="w-48" />
+<nav class="bg-white border-white-200 sticky top-0 z-50 shadow-lg backdrop-blur-md">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <Link href="/" >
+                <img src="/img/Intrastrata-final.gif" class="w-48 " />
+
+            </Link>
             <button @click="toggleMenu" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                 aria-controls="mega-menu-full" :aria-expanded="isMenuOpen ? 'true' : 'false'">
@@ -112,8 +115,8 @@ const toggleAboutUs = () => {
             class="mt-1 border-gray-200 shadow-xs bg-white-200 md:bg-white border-y">
             <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
                 <ul>
-                    <Link> <!--Left side-->
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
+                    <Link href="/about-us/CompanyProfile"> <!--Left side-->
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
                             <div class="font-semibold">Company Profile</div>
                             
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
@@ -162,7 +165,7 @@ const toggleAboutUs = () => {
                     </Link>
                     <Link>
                         <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
-                            <div class="font-semibold">Fire</div>
+                            <div class="font-semibold">Fire & Allied Perils </div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>
