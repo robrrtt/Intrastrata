@@ -4,6 +4,8 @@ import { Head } from "@inertiajs/vue3";
 import { ref } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import Footer from "@/Components/footer.vue";
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 // Form Handling
 const form = useForm({
@@ -16,13 +18,28 @@ const form = useForm({
 // Submit Form
 const submitForm = () => {
     form.post("/contact", {
-        onSuccess: () => alert("Your message has been sent!"),
+        onSuccess: () => {
+            Swal.fire({
+                title: "Success!",
+                text: "Your message has been sent!",
+                icon: "success",
+                confirmButtonText: "OK",
+            });
+            form.reset(); //clear form is success
+        },
+        onError: () => {
+            Swal.fire({
+                title: "Error!",
+                text: "Something went wrong. Please try again.",
+                icon: "error",
+                confirmButtonText: "Retry",
+            });
+        }
     });
 };
 </script>
 
 <template>
-
     <Header />
     <Head title="Talk to Us" />
 

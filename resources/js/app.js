@@ -7,7 +7,8 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+
+const appName = import.meta.env.VITE_APP_NAME;
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -25,4 +26,4 @@ createInertiaApp({
     progress: {
         color: '  #e9950c  ',
     },
-});
+}); 

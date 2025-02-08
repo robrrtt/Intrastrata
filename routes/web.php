@@ -5,20 +5,24 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-/*
+use App\Http\Controllers\ContactController; //contactus
+
+
+
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('LandingPage/Home', [ 
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
 });
-*/
+
 
 Route::get('/', function () {
     return Inertia::render('LandingPage/Home');
 });
+
 
 Route::get('/about-us', function () {
     return Inertia::render('LandingPage/AboutUs');
@@ -35,9 +39,12 @@ Route::get('/Claims', function () {
 Route::get('/products', function () {
     return Inertia::render('LandingPage/Products');
 }); 
+
 Route::get('/talk-to-us', function () {
     return Inertia::render('LandingPage/TalktoUs');
 }); 
+Route::post('/contact', [ContactController::class, 'store']);
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -72,23 +79,19 @@ Route::get('/products/Casualty', function () {
     return Inertia::render('Products/Casualty');
 }); 
 
-/*soon to be admin
+/* Admin Route
 Route::get('/about-us', function () {
     return Inertia::render('Admin/AboutUs');
 })->middleware(['auth', 'verified'])->name('AboutUs');
-
 Route::get('/connect-with-us', function () {
     return Inertia::render('Admin/ConnectwithUs');
 })->middleware(['auth', 'verified'])->name('connect-with-us');
-
 Route::get('/join-us', function () {
     return Inertia::render('Admin/JoinUs');
 })->middleware(['auth', 'verified'])->name('join-us');
-
 Route::get('/products', function () {
     return Inertia::render('Admin/Products');
 })->middleware(['auth', 'verified'])->name('Products');
-
 Route::get('/talk-to-us', function () {
     return Inertia::render('Admin/TalktoUs');
 })->middleware(['auth', 'verified'])->name('TalktoUs');

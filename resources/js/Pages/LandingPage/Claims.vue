@@ -44,51 +44,57 @@ const selectClaim = (claim) => {
 </script>
 
 <template>
-  <Header />
+  <div class="flex flex-col min-h-screen bg-gray-100">
+    <Header />
 
-  <!-- Hero Section -->
-  <section class="bg-slate-900 text-white text-center py-10">
-    <h1 class="text-5xl font-bold">Claims</h1>
-    <p class="mt-2 text-lg text-gray-300">Select a claim type to view details and requirements</p>
-  </section>
+    <main class="flex-grow container mx-auto px-6 py-10">
+      <!-- Hero Section -->
+      <section class="bg-slate-900 text-white text-center py-12 rounded-xl shadow-lg">
+        <h1 class="text-5xl font-bold">Claims</h1>
+        <p class="mt-3 text-lg text-gray-300">
+          Select a claim type to view details and requirements
+        </p>
+      </section>
 
-  <!-- Claims Section -->
-  <div class="container mx-auto px-3 py-5 border border-red-600">
+      <!-- Claims Section -->
+      <div class="mt-10 flex flex-col lg:flex-row gap-8">
+        <!-- Claim List -->
+        <div class="lg:w-1/3 bg-white rounded-xl shadow-lg p-6">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Claim Types</h2>
+          <div class="space-y-3">
+            <button 
+              v-for="claim in claims" 
+              :key="claim.name" 
+              @click="selectClaim(claim)"
+              class="w-full px-6 py-3 text-left rounded-lg font-medium transition-all duration-300 border-2"
+              :class="{
+                'bg-gray-900 text-white border-gray-900 shadow-lg': selectedClaim.name === claim.name,
+                'bg-white text-gray-900 hover:bg-gray-200 border-gray-300': selectedClaim.name !== claim.name
+              }"
+            >
+              {{ claim.name }}
+            </button>
+          </div>
+        </div>
 
-    <!-- Claim List -->
-    <div class="flex flex-wrap justify-center gap-2">
-      <div 
-        v-for="claim in claims" 
-        :key="claim.name" 
-        @click="selectClaim(claim)"
-        class="px-6 py-3 border rounded-lg shadow-md cursor-pointer transition duration-300 ease-in-out text-center min-w-[120px]"
-        :class="{
-          'bg-gray-900 text-white shadow-lg': selectedClaim.name === claim.name,
-          'hover:bg-gray-100': selectedClaim.name !== claim.name
-        }"
-      >
-        <h3 class="text-lg font-semibold">{{ claim.name }}</h3>
+        <!-- Selected Claim Details -->
+        <div class="lg:w-2/3 bg-white rounded-xl shadow-lg p-8">
+          <h3 class="text-3xl font-bold text-gray-900">{{ selectedClaim.name }}</h3>
+          <p class="mt-4 text-gray-600">{{ selectedClaim.details }}</p>
+
+          <!-- Requirements -->
+          <div class="mt-6">
+            <h4 class="text-xl font-semibold text-gray-900">Requirements:</h4>
+            <ul class="list-disc list-inside mt-2 text-gray-700 space-y-2">
+              <li v-for="requirement in selectedClaim.requirements" :key="requirement">
+                {{ requirement }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <!-- Selected Claim Details -->
-    <div class="mt-6 p-6 rounded-xl border border-gray-300 shadow-lg bg-white">
-      <h3 class="text-3xl font-bold text-gray-900">{{ selectedClaim.name }}</h3>
-      <p class="mt-4 text-gray-600">{{ selectedClaim.details }}</p>
-
-      <!-- Requirements -->
-      <div class="mt-6">
-        <h4 class="text-xl font-semibold text-gray-900">Requirements:</h4>
-        <ul class="list-disc list-inside mt-2 text-gray-700 space-y-2">
-          <li v-for="requirement in selectedClaim.requirements" :key="requirement">
-            {{ requirement }}
-          </li>
-        </ul>
-      </div>
-    </div>
-
+    <Footer />
   </div>
-
-  <Footer />
 </template>
-
