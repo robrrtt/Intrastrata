@@ -123,25 +123,25 @@ const toggleAboutUs = () => {
                                 using.</span>
                         </a>
                     </Link>
-                    <Link>
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
-                            <div class="font-semibold">Corporate Governance</div>
+                    <Link href="/about-us/BranchandAgencies">
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
+                            <div class="font-semibold">Branches and Agencies</div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>
                     </Link>
                 </ul>
                 <ul> 
-                    <Link> <!--right side-->
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
-                            <div class="font-semibold">Pioneeer Client</div>
+                    <Link href="/about-us/PartnersandAcreditation"> <!--right side-->
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
+                            <div class="font-semibold">Partners and Acreditation</div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>
                     </Link>
-                    <Link>
-                        <a href="#" class="block p-3 rounded-lg hover:bg-gray-100">
-                            <div class="font-semibold">Milestones</div>
+                    <Link href="/about-us/CorporateGovernance">
+                        <a class="block p-3 rounded-lg hover:bg-gray-100">
+                            <div class="font-semibold">Corporate Governance</div>
                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already
                                 using.</span>
                         </a>

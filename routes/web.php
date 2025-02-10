@@ -54,6 +54,15 @@ Route::get('/dashboard', function () {
 Route::get('/about-us/CompanyProfile', function () {
     return Inertia::render('AboutUs/CompanyProfile');
 }); 
+Route::get('/about-us/BranchandAgencies', function () {
+    return Inertia::render('AboutUs/BranchandAgencies');
+}); 
+Route::get('/about-us/CorporateGovernance', function () {
+    return Inertia::render('AboutUs/CorporateGovernance');
+}); 
+Route::get('/about-us/PartnersandAcreditation', function () {
+    return Inertia::render('AboutUs/PartnersandAcreditaiton');
+}); 
 
 //Product Us Route
 Route::get('/products/MotorCar', function () {

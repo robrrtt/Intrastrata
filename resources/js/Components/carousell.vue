@@ -53,7 +53,7 @@ onUnmounted(() => {
                     <!-- CTA Overlay -->
                     <div v-if="currentSlide === index" class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white text-center px-6 md:px-12">
                         <h2 class="text-3xl md:text-5xl font-bold drop-shadow-lg">{{ slide.title }}</h2>
-                        <a :href="slide.link" class="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-lg shadow-md transition">
+                        <a :href="slide.link" class="mt-4 px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500  text-white text-lg font-semibold rounded-lg shadow-md transition">
                             {{ slide.buttonText }}
                         </a>
                     </div>
