@@ -26,7 +26,7 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
             <div class="flex items-center justify-center  p-6 w-full">
                 <div class="flex flex-col w-full text-center">
                     <h1 class="text-3xl font-extrabold leading-tight tracking-tight text-slate-800 md:text-3xl lg:text-6xl dark:text-slate-800 uppercase">
-                    Intrastrata Assurance Corporation
+                    Intrastrata Assurance Corporationsss
                     </h1>
                 </div>
             </div>
