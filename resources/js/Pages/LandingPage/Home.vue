@@ -5,6 +5,9 @@ import Header from "@/Components/Header.vue";
 import Footer from "@/Components/footer.vue";
 import Carousell from "@/Components/carousell.vue";
 import Products from "@/Components/Products.vue";
+import FeatureSelection from "@/Components/FeatureSelection.vue";
+
+import Forms from "@/Components/Forms.vue";
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -43,14 +46,14 @@ onMounted(() => {
             <Carousell />
         </div>
         
-        <div class="flex items-center justify-center p-10">
+        <!-- <div class="flex items-center justify-center p-10">
             <h1 ref="titleRef" class="text-5xl font-extrabold text-slate-900 tracking-tight transition-all duration-1000 opacity-0 translate-y-10 uppercase">
                 Intrastrata Assurance Corporation
             </h1>
         </div>
-        
+        -->
+        <FeatureSelection/> 
         <Products class="p-12" />
-        
         <div ref="aboutRef" class="transition-all duration-1000 opacity-0 translate-y-10 p-10 bg-white shadow-lg rounded-lg mx-5 md:mx-20">
             <h1 class="text-2xl md:text-4xl font-bold text-slate-800 text-center mb-6">
                 About Us
@@ -72,7 +75,9 @@ onMounted(() => {
                 </div>
             </div>
         </div>
+      
+
     </div>
-    
+    <Forms/>
     <Footer />
 </template>
