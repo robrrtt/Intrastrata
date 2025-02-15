@@ -38,7 +38,7 @@ onUnmounted(() => {
     <div class="relative w-screen">
         <div class="overflow-hidden bg-white shadow-sm">
             <!-- Carousel Wrapper -->
-            <div class="relative w-screen h-[40vh] md:h-[70vh] overflow-hidden">
+            <div class="relative w-screen h-[40vh] md:h-[90vh] overflow-hidden">
                 <!-- Slide Items -->
                 <div
                     v-for="(slide, index) in slides"

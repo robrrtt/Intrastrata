@@ -5,7 +5,9 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-use App\Http\Controllers\ContactController; //contactus
+use App\Http\Controllers\ContactController; //contactus 
+use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\FileController;
 
 
 
@@ -88,7 +90,7 @@ Route::get('/products/Casualty', function () {
     return Inertia::render('Products/Casualty');
 }); 
 
-/* Admin Route
+
 Route::get('/about-us', function () {
     return Inertia::render('Admin/AboutUs');
 })->middleware(['auth', 'verified'])->name('AboutUs');
@@ -104,7 +106,10 @@ Route::get('/products', function () {
 Route::get('/talk-to-us', function () {
     return Inertia::render('Admin/TalktoUs');
 })->middleware(['auth', 'verified'])->name('TalktoUs');
-*/
+
+Route::post('/upload', [FileController::class, 'store']);
+Route::get('/files', [FileController::class, 'index']);
+Route::get('/download/{id}', [FileController::class, 'download']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

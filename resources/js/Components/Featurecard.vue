@@ -10,7 +10,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full md:w-56 p-6 bg-white border border-gray-200 rounded-lg shadow-md transition hover:shadow-lg">
+  <div
+    class="w-full md:w-56 p-6 bg-white border border-gray-200 rounded-lg shadow-md transition hover:shadow-lg animate-fadeInUp"
+  >
     <div class="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
       <FontAwesomeIcon :icon="icon" class="text-green-700 text-2xl" />
     </div>

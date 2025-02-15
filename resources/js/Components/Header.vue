@@ -47,7 +47,7 @@ const toggleAboutUs = () => {
 </script>
 
 <template>
-<nav class="bg-white border-white-200 sticky top-0 z-50 shadow-lg backdrop-blur-md">
+<nav class="bg-white border-blue-200 sticky top-0 z-50 shadow-lg backdrop-blur-md">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <Link href="/" >
                 <img src="/img/Intrastrata-final.gif" class="w-48 " />

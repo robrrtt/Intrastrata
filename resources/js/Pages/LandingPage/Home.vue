@@ -46,12 +46,6 @@ onMounted(() => {
             <Carousell />
         </div>
         
-        <!-- <div class="flex items-center justify-center p-10">
-            <h1 ref="titleRef" class="text-5xl font-extrabold text-slate-900 tracking-tight transition-all duration-1000 opacity-0 translate-y-10 uppercase">
-                Intrastrata Assurance Corporation
-            </h1>
-        </div>
-        -->
         <FeatureSelection/> 
         <Products class="p-12" />
         <div ref="aboutRef" class="transition-all duration-1000 opacity-0 translate-y-10 p-10 bg-white shadow-lg rounded-lg mx-5 md:mx-20">

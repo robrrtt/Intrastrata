@@ -2,6 +2,21 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head } from "@inertiajs/vue3";
 import Carousell from "@/Components/carousell.vue";
+import FileUpload from "@/Pages/Admin/FileUpload.vue";
+
+import { ref, onMounted } from "vue";
+
+const files = ref([]);
+
+const fetchFiles = () => {
+    fetch("/files")
+        .then(response => response.json())
+        .then(data => (files.value = data))
+        .catch(error => console.error("Error fetching files:", error));
+};
+
+onMounted(fetchFiles);
+
 </script>
 
 <template>
@@ -21,7 +36,7 @@ import Carousell from "@/Components/carousell.vue";
                         </h1>
                     </div>
                 </div>
-                <div></div>
+                <FileUpload/>
                 <div class="border border-red-600">
                     <h2
                         class="text-xl font-semibold leading-tight text-gray-800"
@@ -30,10 +45,17 @@ import Carousell from "@/Components/carousell.vue";
                     </h2>
                     <div class="grid grid-cols-3 gap-4 m-4">
                         <div class="border border-red-600 col-span-2 ...">
-                            <img
-                                src="/img/88 corp.jpg"
-                                class="block w-full h-full"
-                            />
+                            <div class="p-6 bg-white rounded shadow-md">
+                                <h2 class="text-lg font-semibold mb-4">Uploaded PDFs</h2>
+                                <ul v-if="files.length">
+                                    <li v-for="file in files" :key="file.id" class="mb-2">
+                                        <a :href="`/download/${file.id}`" class="text-blue-600 hover:underline">
+                                            {{ file.name }}
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p v-else>No files uploaded.</p>
+                            </div>
                         </div>
                         <div class="border border-red-600 ...">
                             <article>
