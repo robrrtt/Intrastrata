@@ -45,17 +45,24 @@ onMounted(fetchFiles);
                     </h2>
                     <div class="grid grid-cols-3 gap-4 m-4">
                         <div class="border border-red-600 col-span-2 ...">
-                            <div class="p-6 bg-white rounded shadow-md">
-                                <h2 class="text-lg font-semibold mb-4">Uploaded PDFs</h2>
-                                <ul v-if="files.length">
-                                    <li v-for="file in files" :key="file.id" class="mb-2">
-                                        <a :href="`/download/${file.id}`" class="text-blue-600 hover:underline">
-                                            {{ file.name }}
-                                        </a>
-                                    </li>
-                                </ul>
-                                <p v-else>No files uploaded.</p>
-                            </div>
+                            <div class="p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-lg font-semibold mb-4">Uploaded PDFs</h2>
+
+    <div v-if="files.length" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div v-for="file in files" :key="file.id" class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+            <p class="text-sm text-gray-500">File ID: <span class="font-semibold">{{ file.id }}</span></p>
+            <h3 class="text-md font-medium text-gray-900 mt-1 truncate">{{ file.name }}</h3>
+
+            <a :href="`/download/${file.id}`" 
+               class="mt-2 inline-block text-sm text-blue-600 hover:text-blue-800 font-semibold transition">
+                Download
+            </a>
+        </div>
+    </div>
+
+    <p v-else class="text-gray-600">No files uploaded.</p>
+</div>
+
                         </div>
                         <div class="border border-red-600 ...">
                             <article>
