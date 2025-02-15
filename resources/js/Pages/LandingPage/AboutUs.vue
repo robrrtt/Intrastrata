@@ -28,7 +28,7 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
                     <h1 class="text-3xl font-extrabold leading-tight tracking-tight text-slate-800 md:text-3xl lg:text-6xl dark:text-slate-800 uppercase">
                     Intrastrata Assurance Corporation
                     </h1>
-                </div>
+                </div>  
             </div>
             <Products class="p-10"/>
             <!--<div class="border border-red-600 p-4">-->
