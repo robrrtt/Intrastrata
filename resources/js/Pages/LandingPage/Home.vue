@@ -6,7 +6,6 @@ import Footer from "@/Components/footer.vue";
 import Carousell from "@/Components/carousell.vue";
 import Products from "@/Components/Products.vue";
 import FeatureSelection from "@/Components/FeatureSelection.vue";
-
 import Forms from "@/Components/Forms.vue";
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -15,7 +14,7 @@ import { faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured } fr
 
 library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
 
-const titleRef = ref(null);
+const featureSelectionRef = ref(null);
 const aboutRef = ref(null);
 const imageRef = ref(null);
 const textRef = ref(null);
@@ -30,7 +29,7 @@ onMounted(() => {
         });
     }, { threshold: 0.2 });
 
-    if (titleRef.value) observer.observe(titleRef.value);
+    if (featureSelectionRef.value) observer.observe(featureSelectionRef.value);
     if (aboutRef.value) observer.observe(aboutRef.value);
     if (imageRef.value) observer.observe(imageRef.value);
     if (textRef.value) observer.observe(textRef.value);
@@ -45,9 +44,14 @@ onMounted(() => {
         <div class="overflow-hidden bg-white">
             <Carousell />
         </div>
-        
-        <FeatureSelection/> 
+
+        <!-- Feature Selection Section with Animation -->
+        <div ref="featureSelectionRef" class="transition-all duration-1000 opacity-0 translate-y-10">
+            <FeatureSelection />
+        </div>
+
         <Products class="p-12" />
+
         <div ref="aboutRef" class="transition-all duration-1000 opacity-0 translate-y-10 p-10 bg-white shadow-lg rounded-lg mx-5 md:mx-20">
             <h1 class="text-2xl md:text-4xl font-bold text-slate-800 text-center mb-6">
                 About Us
@@ -69,9 +73,8 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-      
-
     </div>
+
     <Forms/>
     <Footer />
 </template>

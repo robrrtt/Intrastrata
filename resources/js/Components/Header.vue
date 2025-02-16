@@ -95,16 +95,16 @@ const toggleAboutUs = () => {
                             </svg>
                         </button>
                     </div>
-                    <Link href="/Claims"
-                        :class="['block py-2 px-3 md:p-0', isActive('/Claims').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
+                    <Link href="/gl/Claims"
+                        :class="['block py-2 px-3 md:p-0', isActive('/gl/Claims').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
                         Claims
                     </Link>
-                    <Link href="/join-us"
-                        :class="['block py-2 px-3 md:p-0', isActive('/join-us').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
+                    <Link href="/gl/join-us"
+                        :class="['block py-2 px-3 md:p-0', isActive('/gl/join-us').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
                         Join Us
                     </Link>
-                    <Link href="/talk-to-us"
-                        :class="['block py-2 px-3 md:p-0', isActive('/contact').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
+                    <Link href="/gl/talk-to-us"
+                        :class="['block py-2 px-3 md:p-0', isActive('/gl/contact').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
                         Talk To Us
                     </Link>
                 </div>

@@ -43,8 +43,7 @@ onMounted(() => {
                     Protect What You Own, Secure Your Future.
                 </h2>
                 <p class="text-gray-600">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    Life is unpredictable, but your protection shouldn’t be. At Intrastrata, we provide customized non-life insurance solutions to protect what matters most—your vehicle, home, business, and financial interests. Whether you're an individual or a business owner, we ensure you’re covered against unexpected risks.
                 </p>
                 <button
                     class="bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-800 hover:scale-105 transition-transform duration-300"

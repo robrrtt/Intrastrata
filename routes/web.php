@@ -26,26 +26,26 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about-us', function () {
+Route::get('/gl/about-us', function () {
     return Inertia::render('LandingPage/AboutUs');
 }); 
 
-Route::get('/join-us', function () {
+Route::get('/gl/join-us', function () {
     return Inertia::render('LandingPage/JoinUs');
 }); 
 
-Route::get('/Claims', function () {
+Route::get('/gl/Claims', function () {
     return Inertia::render('LandingPage/Claims');
 }); 
 
-Route::get('/products', function () {
+Route::get('/gl/products', function () {
     return Inertia::render('LandingPage/Products');
 }); 
 
-Route::get('/talk-to-us', function () {
+Route::get('/gl/talk-to-us', function () {
     return Inertia::render('LandingPage/TalktoUs');
 }); 
-Route::post('/contact', [ContactController::class, 'store']);
+Route::post('/gl/contact', [ContactController::class, 'store']);
 
 
 Route::get('/dashboard', function () {
