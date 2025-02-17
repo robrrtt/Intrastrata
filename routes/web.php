@@ -8,7 +8,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\ContactController; //contactus 
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FileController;
-
+use App\Http\Controllers\InquiryController;
 
 
 Route::get('/', function () {
@@ -90,6 +90,7 @@ Route::get('/products/Casualty', function () {
     return Inertia::render('Products/Casualty');
 }); 
 
+Route::post('/inquiries', [InquiryController::class, 'store']); //email route
 
 Route::get('/about-us', function () {
     return Inertia::render('Admin/AboutUs');

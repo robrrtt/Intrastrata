@@ -15,11 +15,11 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
 
 <template>
     <!--<div class="border border-red-600 p-4"> -->
-        <div class=" bg-gray-200">
+        <div class=" bg-gray-200  border border-red-600">
         <h1 class="text-lg md:text-3xl font-extrabold text-gray-700 uppercase text-center">
             Product We Offer
         </h1>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-8 mt-6">
             <!-- Product Cards -->
             <div class="w-full md:w-auto p-6 bg-white border border-gray-300 rounded-lg shadow-lg">

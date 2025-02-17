@@ -11,6 +11,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
+
+const features = [
+    { icon: ["fas", "car"], title: "Motorcar", text: "Motorcar insurance provides financial protection against loss, damage, or liability incurred by the policyholder due to accidents arising from vehicle ownership and operation." },
+    { icon: ["fas", "house-fire"], title: "Fire", text: "Comprehensive insurance coverage that primarily protects against losses or damages caused by fire and lightning, with optional extensions for additional risks through an enhanced premium." },
+    { icon: ["fas", "scale-balanced"], title: "Bonds", text: "A bond is a stable and reliable asset designed to safeguard against potential financial losses." },
+    { icon: ["fas", "ship"], title: "Marine Lines", text: "Protect your merchandise every step of the way – from the seller's premises to the buyer's hands. Our coverage spans all modes of transportation, whether by land, sea, or air, ensuring seamless protection throughout the journey." }
+];
 </script>
 
 <template>
@@ -18,133 +25,21 @@ library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
         <h1 class="text-lg md:text-2xl font-extrabold text-gray-800 uppercase text-center">
             Product We Offer
         </h1>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-8 mt-6">
-            <!-- Product Cards -->
-            <div class="w-full md:w-auto p-6 bg-white border border-gray-300 rounded-lg shadow-lg">
-                <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full mb-4">
-                    <font-awesome-icon :icon="['fas', 'car']" class="text-slate-800 text-[35px]" />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+            <div 
+                v-for="(feature, index) in features" 
+                :key="index" 
+                class="bg-white border border-red-200 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:scale-105"
+            >
+                <div class="flex justify-center items-center w-16 h-16 bg-gray-100 rounded-full mx-auto mb-4">
+                    <font-awesome-icon :icon="feature.icon" class="text-gray-700 text-2xl" />
                 </div>
-                <a href="#">
-                    <h5 class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-gray-900">
-                        Motorcar
-                    </h5>
-                </a>
-                <p class="mb-4 text-gray-600">
-                    Motorcar insurance provides financial protection against loss, damage, or liability incurred by the policyholder due to accidents arising from vehicle ownership and operation.
+                <h5 class="text-lg font-semibold text-gray-900">
+                    {{ feature.title }}
+                </h5>
+                <p class="text-sm text-gray-600 mt-2">
+                    {{ feature.text }}
                 </p>
-                <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
-                    See our guideline
-                    <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                    </svg>
-                </a>
-            </div>
-            <div class="w-full md:w-auto p-6 bg-white border border-gray-300 rounded-lg shadow-lg">
-                <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full mb-4">
-                    <font-awesome-icon :icon="['fas', 'house-fire']" class="text-slate-800 text-[35px]" />
-                </div>
-                <a href="#">
-                    <h5 class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-gray-900">
-                        Fire
-                    </h5>
-                </a>
-                <p class="mb-4 text-gray-600">
-                    Comprehensive insurance coverage that primarily protects against losses or damages caused by fire and lightning, with optional extensions for additional risks through an enhanced premium.
-                </p>
-                <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
-                    See our guideline
-                    <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                    </svg>
-                </a>
-            </div>
-            <div class="w-full md:w-auto p-6 bg-white border border-gray-300 rounded-lg shadow-lg">
-                <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full mb-4">
-                    <font-awesome-icon :icon="['fas', 'scale-balanced']" class="text-slate-800 text-[35px]" />
-                </div>
-                <a href="#">
-                    <h5 class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-gray-900">
-                        Bonds
-                    </h5>
-                </a>
-                <p class="mb-4 text-gray-600">
-                    A bond is a stable and reliable asset designed to safeguard against potential financial losses.
-                </p>
-                <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
-                    See our guideline
-                    <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                    </svg>
-                </a>
-            </div>
-            <div class="w-full md:w-auto p-6 bg-white border border-gray-300 rounded-lg shadow-lg">
-                <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full mb-4">
-                    <font-awesome-icon :icon="['fas', 'ship']" class="text-slate-800 text-[35px]" />
-                </div>
-                <a href="#">
-                    <h5 class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-gray-900">
-                        Marine Lines
-                    </h5>
-                </a>
-                <p class="mb-4 text-gray-600">
-                    Protect your merchandise every step of the way – from the seller's premises to the buyer's hands. Our coverage spans all modes of transportation, whether by land, sea, or air, ensuring seamless protection throughout the journey.
-                </p>
-                <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
-                    See our guideline
-                    <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                    </svg>
-                </a>
-            </div>
-            <div class="w-full md:w-auto p-6 bg-white border border-gray-300 rounded-lg shadow-lg">
-                <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full mb-4">
-                    <font-awesome-icon :icon="['fas', 'gear']" class="text-slate-800 text-[35px]" />
-                </div>
-                <a href="#">
-                    <h5 class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-gray-900">
-                        Engineering Lines
-                    </h5>
-                </a>
-                <p class="mb-4 text-gray-600">
-                    It provides comprehensive coverage for the construction and installation of structures, machinery, equipment, systems, and processes, safeguarding against loss, material damage, and third-party liability.                </p>
-                <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
-                    See our guideline
-                    <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                    </svg>
-                </a>
-            </div>
-            <div class="w-full md:w-auto p-6 bg-white border border-gray-300 rounded-lg shadow-lg">
-                <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full mb-4">
-                    <font-awesome-icon :icon="['fas', 'user-injured']" class="text-slate-800 text-[35px]" />
-                </div>
-                <a href="#">
-                    <h5 class="mb-2 text-xl md:text-2xl font-semibold tracking-tight text-gray-900">
-                        Casualty Lines 
-                    </h5>
-                </a>
-                <p class="mb-4 text-gray-600">
-                    Accidental Insurance offers financial protection, providing compensation as agreed upon, in the event of death or bodily injury resulting from an accidental, violent, external, and visible cause.
-                </p>
-                <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition">
-                    See our guideline
-                    <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                    </svg>
-                </a>
             </div>
         </div>
     </div>

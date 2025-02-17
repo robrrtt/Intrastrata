@@ -50,8 +50,7 @@ const toggleAboutUs = () => {
 <nav class="bg-white border-blue-200 sticky top-0 z-50 shadow-lg backdrop-blur-md">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <Link href="/" >
-                <img src="/img/Intrastrata-final.gif" class="w-48 " />
-
+                <img src="/img/Intrastrata-final.gif" class="w-48 "/>
             </Link>
             <button @click="toggleMenu" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"

@@ -37,7 +37,7 @@ onUnmounted(() => {
 <template>
     <div class="relative w-screen">
         <div class="overflow-hidden bg-white shadow-sm">
-            <div class="relative w-screen h-[40vh] md:h-[90vh] overflow-hidden">
+            <div class="relative w-screen h-[40vh] md:h-[85vh] overflow-hidden">
                 <div class="flex w-full h-full transition-transform duration-700"
                     :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
                     <div v-for="(slide, index) in slides" :key="index" class="min-w-full relative h-full">

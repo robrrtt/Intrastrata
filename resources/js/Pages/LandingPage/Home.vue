@@ -7,6 +7,8 @@ import Carousell from "@/Components/carousell.vue";
 import Products from "@/Components/Products.vue";
 import FeatureSelection from "@/Components/FeatureSelection.vue";
 import Forms from "@/Components/Forms.vue";
+import InquiryForm from "@/Components/InquiryForm.vue";
+
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -50,7 +52,7 @@ onMounted(() => {
             <FeatureSelection />
         </div>
 
-        <Products class="p-12" />
+        <Products class="p-2"  />
 
         <div ref="aboutRef" class="transition-all duration-1000 opacity-0 translate-y-10 p-10 bg-white shadow-lg rounded-lg mx-5 md:mx-20">
             <h1 class="text-2xl md:text-4xl font-bold text-slate-800 text-center mb-6">
@@ -74,7 +76,7 @@ onMounted(() => {
             </div>
         </div>
     </div>
-
+<InquiryForm/>
     <Forms/>
     <Footer />
 </template>

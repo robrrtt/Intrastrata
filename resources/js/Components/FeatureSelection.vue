@@ -8,6 +8,8 @@ const features = [
     { icon: ["fas", "users"], title: "Dedicated Support and Security", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
     { icon: ["fas", "money-bill-wave"], title: "No Policy Fees", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
     { icon: ["fas", "shield-alt"], title: "Moneyback Guarantee", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
+    { icon: ["fas", "money-bill-wave"], title: "No Policy Fees", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
+    { icon: ["fas", "shield-alt"], title: "Moneyback Guarantee", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
 ];
 
 const leftContent = ref(null);
@@ -35,16 +37,16 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="container mx-auto px-6 py-12">
+    <section class="container mx-auto px-6 py-12 border border-red-600">
+        
         <div class="flex flex-col md:flex-row items-center justify-between">
             <!-- Left Content (Slide In) -->
-            <div ref="leftContent" class="md:w-1/2 text-left space-y-4">
+            <div ref="leftContent" class="md:w-1/2 text-left space-y-">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 uppercase">
                     Protect What You Own, Secure Your Future.
                 </h2>
                 <p class="text-gray-600">
-                    Life is unpredictable, but your protection shouldn’t be. At Intrastrata, we provide customized non-life insurance solutions to protect what matters most—your vehicle, home, business, and financial interests. Whether you're an individual or a business owner, we ensure you’re covered against unexpected risks.
-                </p>
+                    Life is unpredictable, but your protection shouldn’t be. Intrastrata offers tailored non-life insurance for your vehicle, home, business, and finances—keeping you covered when it matters most.</p>
                 <button
                     class="bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-800 hover:scale-105 transition-transform duration-300"
                 >
@@ -53,7 +55,7 @@ onMounted(() => {
             </div>
 
             <!-- Right Feature Cards (Fade In with Staggered Effect) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:mt-0">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:mt-8 border border-red-600">
                 <div
                     v-for="(feature, index) in features"
                     :key="index"
