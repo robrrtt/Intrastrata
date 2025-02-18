@@ -37,7 +37,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="container mx-auto px-6 py-12 border border-red-600">
+    <section class="container mx-auto px-6 py-12 ">
         
         <div class="flex flex-col md:flex-row items-center justify-between">
             <!-- Left Content (Slide In) -->
@@ -55,7 +55,7 @@ onMounted(() => {
             </div>
 
             <!-- Right Feature Cards (Fade In with Staggered Effect) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:mt-8 border border-red-600">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:mt-8">
                 <div
                     v-for="(feature, index) in features"
                     :key="index"

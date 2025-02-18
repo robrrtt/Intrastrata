@@ -41,19 +41,16 @@ onMounted(() => {
 <template>
     <Header />
     <Head title="About Us" />
-    
+
     <div class="mx-auto max-w-screen bg-gray-50">
         <div class="overflow-hidden bg-white">
             <Carousell />
         </div>
-
         <!-- Feature Selection Section with Animation -->
         <div ref="featureSelectionRef" class="transition-all duration-1000 opacity-0 translate-y-10">
             <FeatureSelection />
         </div>
-
         <Products class="p-2"  />
-
         <div ref="aboutRef" class="transition-all duration-1000 opacity-0 translate-y-10 p-10 bg-white shadow-lg rounded-lg mx-5 md:mx-20">
             <h1 class="text-2xl md:text-4xl font-bold text-slate-800 text-center mb-6">
                 About Us
@@ -76,7 +73,7 @@ onMounted(() => {
             </div>
         </div>
     </div>
-<InquiryForm/>
-    <Forms/>
-    <Footer />
+<!--<InquiryForm/>
+    <Forms/> --> 
+     <Footer />
 </template>

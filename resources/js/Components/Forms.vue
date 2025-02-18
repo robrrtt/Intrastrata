@@ -4,7 +4,7 @@
             <!-- Form Section -->
             <div class="w-full ">
                 <!-- Tabs -->
-                <div class="flex border-b mb-4">
+                <div class=" border-b mb-4">
                     <button v-for="tab in tabs" :key="tab" @click="activeTab = tab" :class="[
                         'py-2 px-4 text-gray-600',
                         activeTab === tab ? 'border-b-2 border-green-600 text-black font-semibold' : ''
@@ -61,7 +61,7 @@
 import { ref } from "vue";
 import axios from "axios";
 
-const tabs = ["CAR", "HOME", "LIFE", "HEALTH"];
+const tabs = ["Fire and Allied Perils","Motor Car","Casualty","Engineering","Surety"];
 const activeTab = ref("CAR");
 
 const form = ref({

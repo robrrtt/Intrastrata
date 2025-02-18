@@ -1,14 +1,13 @@
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue';
-
+import { ref, onMounted, onUnmounted } from 'vue';
 const currentSlide = ref(0);
 const totalSlides = 4;
 
 const slides = ref([
-    { image: '/img/nyc.jpg', title: 'Fire & Allied Perils ', details:'Protect your home or business from fire, natural calamities, and more.', buttonText: 'Learn More', link: '/nyc' },
-    { image: '/img/motorcar.jpg', title: 'MotorCar', details:'Secure your vehicle from accidents, theft, and third-party liabilities.', buttonText: 'View Cars', link: '/cars' },
-    { image: '/img/bonds.jpg', title: 'Investment Bonds', details:'Safeguard contractual obligations with flexible bond coverage.',  buttonText: 'Get Started', link: '/bonds' },
-    { image: '/img/cargo.jpg', title: 'Marine', details:'Cover critical construction, machinery, and engineering risks.', buttonText: 'See More', link: '/cargo' }
+    { image: '/img/file.svg', title: 'Fire & Allied Perils', details: 'Protect your home or business from fire, natural calamities, and more.', buttonText: 'Learn More', link: "/products/Fire" },
+    { image: '/img/motorcar.jpg', title: 'MotorCar', details: 'Secure your vehicle from accidents, theft, and third-party liabilities.', buttonText: 'View Cars', link: "/products/MotorCar" },
+    { image: '/img/bonds.jpg', title: 'Investment Bonds', details: 'Safeguard contractual obligations with flexible bond coverage.', buttonText: 'Get Started', link: "/products/Bonds" },
+    { image: '/img/cargo.jpg', title: 'Marine', details: 'Cover critical construction, machinery, and engineering risks.', buttonText: 'See More', link: "/products/MarineLines" }
 ]);
 
 const slideDirection = ref('');
@@ -50,13 +49,18 @@ onUnmounted(() => {
                                 {{ slide.buttonText }}
                             </a>
                             -->
-                            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">{{ slide.title }}</h1>
-                            <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">{{ slide.details }}</p>
-                            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                                Learn more
-                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                            </svg>
+                            <h1
+                                class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                                {{ slide.title }}</h1>
+                            <p
+                                class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+                                {{ slide.details }}</p>
+                            <a :href="slide.link" class="inline-flex items-center justify-center px-6 py-3 text-white font-semibold rounded-lg shadow-md 
+                                        bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 
+                                        focus:ring-1 focus:ring-yellow-300">
+                                <!-- Home Icon -->
+
+                                {{ slide.buttonText }}
                             </a>
                         </div>
                     </div>

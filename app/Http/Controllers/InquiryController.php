@@ -22,9 +22,12 @@ class InquiryController extends Controller
     if ($request->hasFile('file')) {
         $file = $request->file('file');
         $fileName = time() . '_' . $file->getClientOriginalName();
-        $file->storeAs('public/uploads', $fileName); // Store in 'storage/app/public/uploads'
+        // Store file in 'storage/app/public/uploads'
+        $file->storeAs('public/uploads/pdfs', $fileName);
+        \Log::info('File uploaded: ' . $fileName);
     } else {
         $fileName = null;
+        \Log::info('No file uploaded');
     }
 
     // Save to Database
@@ -47,6 +50,7 @@ class InquiryController extends Controller
 
     return response()->json(['message' => 'Inquiry submitted successfully!'], 201);
 }
+
 
     private function sendEmail($data)
     {
