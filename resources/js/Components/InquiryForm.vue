@@ -41,12 +41,17 @@
 
         <p v-if="message" class="mt-4 text-center text-green-600">{{ message }}</p>
     </div>
+
+    <button @click="showSweetAlert" 
+            class="mt-4 w-full py-2 px-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+            Show SweetAlert
+        </button>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 const form = ref({
     name: '',
     contact_no: '',
@@ -61,7 +66,14 @@ const message = ref(null);
 const handleFileUpload = (event) => {
     form.value.file = event.target.files[0]; // Save the selected file
 };
-
+const showSweetAlert = () => {
+    Swal.fire({
+        icon: 'info',
+        title: 'Hello!',
+        text: 'This is a SweetAlert popup!',
+        confirmButtonColor: '#3085d6'
+    });
+};
 const submitForm = async () => {
     const formData = new FormData();
     formData.append('name', form.value.name);

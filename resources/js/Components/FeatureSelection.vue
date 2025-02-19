@@ -1,16 +1,20 @@
 <script setup>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { useMotion } from "@vueuse/motion";
 import { ref, onMounted } from "vue";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+import { faHandshake, faUsers, faMoneyBillWave, faShieldAlt } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faHandshake, faUsers, faMoneyBillWave, faShieldAlt);
 
 const features = [
-    { icon: ["fas", "handshake"], title: "Trusted Insurance Company", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
-    { icon: ["fas", "users"], title: "Dedicated Support and Security", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
-    { icon: ["fas", "money-bill-wave"], title: "No Policy Fees", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
-    { icon: ["fas", "shield-alt"], title: "Moneyback Guarantee", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
-    { icon: ["fas", "money-bill-wave"], title: "No Policy Fees", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
-    { icon: ["fas", "shield-alt"], title: "Moneyback Guarantee", text: "Lorem Ipsum is simply dummy text of the printing and industry." },
+    { icon: faHandshake, title: "Trusted Insurance Company", text: "Reliable coverage backed by years of experience." },
+    { icon: faUsers, title: "Dedicated Support and Security", text: "Ensuring your peace of mind with reliable protection." },
+    { icon: faMoneyBillWave, title: "No Policy Fees", text: "Transparent pricing with no hidden charges." },
+    { icon: faShieldAlt, title: "Moneyback Guarantee", text: "Risk-free coverage with a refund assurance." },
 ];
+
 
 const leftContent = ref(null);
 const ctaSection = ref(null);
@@ -45,11 +49,9 @@ onMounted(() => {
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 uppercase">
                     Protect What You Own, Secure Your Future.
                 </h2>
-                <p class="text-gray-600">
+                <p class="text-white-600">
                     Life is unpredictable, but your protection shouldn’t be. Intrastrata offers tailored non-life insurance for your vehicle, home, business, and finances—keeping you covered when it matters most.</p>
-                <button
-                    class="bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-800 hover:scale-105 transition-transform duration-300"
-                >
+                <button class="bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-orange-500 hover:scale-105 transition-transform duration-300 mt-10">
                     Learn More
                 </button>
             </div>
@@ -62,13 +64,13 @@ onMounted(() => {
                     ref="featureRefs"
                     class="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:scale-105"
                 >
-                    <div class="flex justify-center items-center w-16 h-16 bg-gray-100 rounded-full mx-auto mb-4">
-                        <font-awesome-icon :icon="feature.icon" class="text-gray-700 text-2xl" />
+                    <div class="flex justify-center items-center w-16 h-16 bg-gray-100 rounded-full mx-auto mb-4 ">
+                        <font-awesome-icon :icon="feature.icon" class="text-orange-700 text-2xl " />
                     </div>
                     <h5 class="text-lg font-semibold text-gray-900">
                         {{ feature.title }}
                     </h5>
-                    <p class="text-sm text-gray-600 mt-2">
+                    <p class="text-sm text-gray-600 mt-2 ">
                         {{ feature.text }}
                     </p>
                 </div>
@@ -76,7 +78,7 @@ onMounted(() => {
         </div>
 
         <!-- CTA Section (Slide In) -->
-        <div ref="ctaSection" class="bg-gray-100 p-6 rounded-lg mt-12 flex flex-col md:flex-row justify-between items-center">
+        <div ref="ctaSection" class="bg-orange-100 p-6 rounded-lg mt-12 flex flex-col md:flex-row justify-between items-center">
             <div>
                 <h3 class="text-lg font-semibold text-gray-800">
                     Suggestion which insurance plan to pick?
@@ -86,7 +88,7 @@ onMounted(() => {
                 </p>
             </div>
             <button
-                class="bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-800 hover:scale-105 transition-transform duration-300 mt-4 md:mt-0"
+                class="bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-orange-500 hover:scale-105 transition-transform duration-300 mt-4 md:mt-0"
             >
                 Know More →
             </button>

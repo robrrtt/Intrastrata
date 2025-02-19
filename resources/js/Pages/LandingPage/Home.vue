@@ -40,6 +40,7 @@ onMounted(() => {
 
 <template>
     <Header />
+
     <Head title="About Us" />
 
     <div class="mx-auto max-w-screen bg-gray-50">
@@ -50,21 +51,28 @@ onMounted(() => {
         <div ref="featureSelectionRef" class="transition-all duration-1000 opacity-0 translate-y-10">
             <FeatureSelection />
         </div>
-        <Products class="p-2"  />
-        <div ref="aboutRef" class="transition-all duration-1000 opacity-0 translate-y-10 p-10 bg-white shadow-lg rounded-lg mx-5 md:mx-20">
+        <Products class="p-2" />
+        <section class="container mx-auto px-6 py-12 ">
+
+        <div ref="aboutRef"
+            class="transition-all duration-1000 opacity-0 translate-y-10 bg-white/90 backdrop-blur-md shadow-none rounded-none">
             <h1 class="text-2xl md:text-4xl font-bold text-slate-800 text-center mb-6">
                 About Us
             </h1>
             <div class="flex flex-col md:flex-row items-center">
-                <img ref="imageRef" class="w-full md:w-80 h-auto object-cover rounded-lg shadow-md transition-all duration-1000 opacity-0 translate-y-10"
+                <img ref="imageRef"
+                    class="w-full md:w-80 h-auto object-cover rounded-none shadow-none transition-all duration-1000 opacity-0 translate-y-10"
                     src="/img/Designer(4).jpeg" alt="About Us">
                 <div ref="textRef" class="p-6 transition-all duration-1000 opacity-0 translate-y-10">
                     <p class="mb-6 text-lg text-slate-700 leading-relaxed">
-                        INTRASTRATA ASSURANCE CORPORATION is one of the country's leading and oldest Non-Life Insurance Companies, established on September 8, 1959, formerly known as Overseas Insurance Company.
+                        INTRASTRATA ASSURANCE CORPORATION is one of the country's leading and oldest Non-Life Insurance
+                        Companies, established on September 8, 1959, formerly known as Overseas Insurance Company.
                     </p>
-                    <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">
+                    <a href="#"
+                        class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">
                         See our guideline
-                        <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 18 18">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
                         </svg>
@@ -72,8 +80,9 @@ onMounted(() => {
                 </div>
             </div>
         </div>
+        </section>
     </div>
-<!--<InquiryForm/>
-    <Forms/> --> 
-     <Footer />
+    <!--<InquiryForm/>
+    <Forms/> -->
+    <Footer />
 </template>

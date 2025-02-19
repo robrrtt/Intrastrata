@@ -32,7 +32,7 @@ const features = [
                 class="bg-white border border-red-200 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:scale-105"
             >
                 <div class="flex justify-center items-center w-16 h-16 bg-gray-100 rounded-full mx-auto mb-4">
-                    <font-awesome-icon :icon="feature.icon" class="text-gray-700 text-2xl" />
+                    <font-awesome-icon :icon="feature.icon" class="text-orange-700 text-2xl" />
                 </div>
                 <h5 class="text-lg font-semibold text-gray-900">
                     {{ feature.title }}

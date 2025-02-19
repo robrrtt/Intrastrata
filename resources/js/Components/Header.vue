@@ -63,52 +63,54 @@ const toggleAboutUs = () => {
                 </svg>
             </button>
             <div :class="{
-                    'hidden': !isMenuOpen,
-                    'md:flex': true,
-                    'items-center font-medium w-full md:w-auto md:order-1': true,
-                    }" id="mega-menu-full">
-                <div class="flex flex-col md:flex-row md:space-x-8 text-lg font-[700]">
-                    <Link href="/"
-                        :class="['block py-2 px-3 md:p-0', isActive('/Home').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold' ]">
-                        Home
-                    </Link>
-                    <div class="relative">
-                        <button id="mega-menu-full-dropdown-button" @click="toggleAboutUs"
-                            class="flex items-center py-2 px-3 md:p-0 text-gray-900 rounded-sm md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600">
-                            About Us
-                            <svg class="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="relative">
-                        <button id="mega-menu-full-dropdown-button" @click="toggleMenuList"
-                            class="flex items-center py-2 px-3 md:p-0 text-gray-900 rounded-sm md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600">
-                           Product & Services
-                            <svg class="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                    </div>
-                    <Link href="/gl/Claims"
-                        :class="['block py-2 px-3 md:p-0', isActive('/gl/Claims').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
-                        Claims
-                    </Link>
-                    <Link href="/gl/join-us"
-                        :class="['block py-2 px-3 md:p-0', isActive('/gl/join-us').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
-                        Join Us
-                    </Link>
-                    <Link href="/gl/talk-to-us"
-                        :class="['block py-2 px-3 md:p-0', isActive('/gl/contact').value ? 'text-blue-700 font-bold' : 'text-blue-950 hover:font-bold']">
-                        Talk To Us
-                    </Link>
-                </div>
-            </div>
+        'hidden': !isMenuOpen,
+        'md:flex': true,
+        'items-center font-medium w-full md:w-auto md:order-1': true,
+    }" id="mega-menu-full">
+    <div class="relative flex flex-col md:flex-row md:space-x-8 text-lg font-[700]">
+        <Link href="/" 
+            :class="['relative block py-2 px-3 md:p-0 transition-all', isActive('/Home').value ? 'text-blue-700 font-bold after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-blue-700 after:rounded-lg' : 'text-blue-950 hover:font-bold']">
+            Home
+        </Link>
+        <div class="relative">
+            <button id="mega-menu-full-dropdown-button" @click="toggleAboutUs"
+                class="flex items-center py-2 px-3 md:p-0 text-gray-900 rounded-sm md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600">
+                About Us
+                <svg class="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="m1 1 4 4 4-4" />
+                </svg>
+            </button>
         </div>
+        <div class="relative">
+            <button id="mega-menu-full-dropdown-button" @click="toggleMenuList"
+                class="flex items-center py-2 px-3 md:p-0 text-gray-900 rounded-sm md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600">
+                Product & Services
+                <svg class="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="m1 1 4 4 4-4" />
+                </svg>
+            </button>
+        </div>
+        <Link href="/gl/Claims" 
+            :class="['relative block py-2 px-3 md:p-0 transition-all', isActive('/gl/Claims').value ? 'text-blue-700 font-bold after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-blue-700 after:rounded-lg' : 'text-blue-950 hover:font-bold']">
+            Claims
+        </Link>
+        <Link href="/gl/join-us" 
+            :class="['relative block py-2 px-3 md:p-0 transition-all', isActive('/gl/join-us').value ? 'text-blue-700 font-bold after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-blue-700 after:rounded-lg' : 'text-blue-950 hover:font-bold']">
+            Join Us
+        </Link>
+        <Link href="/gl/talk-to-us" 
+            :class="['relative block py-2 px-3 md:p-0 transition-all', isActive('/gl/contact').value ? 'text-blue-700 font-bold after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-blue-700 after:rounded-lg' : 'text-blue-950 hover:font-bold']">
+            Talk To Us
+        </Link>
+    </div>
+</div>
+</div>
+
+
         <!-- Dropdown for About Us -->
         <div v-show="isMenuOpenAboutus" id="mega-menu-full-dropdown"
             class="mt-1 border-gray-200 shadow-xs bg-white-200 md:bg-white border-y">

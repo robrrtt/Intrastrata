@@ -27,21 +27,8 @@ const toggleDetails = () => {
                 </button>
             </div>
         </section>
-
-        <!-- Coverage Details -->
-        <section class="py-16 px-6 max-w-5xl mx-auto">
-            <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Coverage & Benefits</h2>
-            <div class="grid sm:grid-cols-2 gap-6">
-                <div v-for="(coverage, index) in coverages" :key="index"
-                    class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                    <h3 class="text-xl font-semibold text-gray-700">{{ coverage.title }}</h3>
-                    <p class="text-gray-600">{{ coverage.description }}</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Details (Expandable) -->
-        <section v-if="showDetails"
+ <!-- Additional Details (Expandable) -->
+         <section v-if="showDetails"
             class="bg-white shadow-md rounded-lg max-w-4xl mx-auto p-8 mt-4 transition-opacity duration-300">
             <h3 class="text-2xl font-semibold text-gray-900 mb-4">Why Choose Our Casualty Insurance?</h3>
             <ul class="list-disc ml-6 text-gray-700">
@@ -55,6 +42,20 @@ const toggleDetails = () => {
                 Close
             </button>
         </section>
+
+        <!-- Coverage Details -->
+        <section class="py-16 px-6 max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Coverage & Benefits</h2>
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div v-for="(coverage, index) in coverages" :key="index"
+                    class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-gray-700">{{ coverage.title }}</h3>
+                    <p class="text-gray-600">{{ coverage.description }}</p>
+                </div>
+            </div>
+        </section>
+
+       
 
         <!-- Call to Action -->
         <section class="text-center py-16 bg-gray-800 text-white mt-12">

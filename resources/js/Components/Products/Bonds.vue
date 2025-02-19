@@ -27,20 +27,6 @@ const toggleDetails = () => {
                 </button>
             </div>
         </section>
-
-        <!-- Bond Types -->
-        <section class="py-16 px-6 max-w-5xl mx-auto">
-            <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Types of Bonds We Offer</h2>
-            <div class="grid sm:grid-cols-2 gap-6">
-                <div v-for="(bond, index) in bondTypes" :key="index"
-                    class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                    <h3 class="text-xl font-semibold text-gray-700">{{ bond.title }}</h3>
-                    <p class="text-gray-600">{{ bond.description }}</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Details (Expandable) -->
         <section v-if="showDetails"
             class="bg-white shadow-md rounded-lg max-w-4xl mx-auto p-8 mt-4 transition-opacity duration-300">
             <h3 class="text-2xl font-semibold text-gray-900 mb-4">Why Choose Bonds Insurance?</h3>
@@ -55,6 +41,20 @@ const toggleDetails = () => {
                 Close
             </button>
         </section>
+        <!-- Bond Types -->
+        <section class="py-16 px-6 max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Types of Bonds We Offer</h2>
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div v-for="(bond, index) in bondTypes" :key="index"
+                    class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-gray-700">{{ bond.title }}</h3>
+                    <p class="text-gray-600">{{ bond.description }}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Details (Expandable) -->
+        
 
         <!-- Call to Action -->
         <section class="text-center py-16 bg-gray-800 text-white mt-12">
