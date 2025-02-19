@@ -6,6 +6,7 @@ import Footer from "@/Components/footer.vue";
 import Carousell from "@/Components/carousell.vue";
 import Products from "@/Components/Products.vue";
 import FeatureSelection from "@/Components/FeatureSelection.vue";
+import Counter from "@/Components/Counter.vue";
 
 const featureSelectionRef = ref(null);
 const aboutRef = ref(null);
@@ -23,6 +24,8 @@ onMounted(() => {
     if (featureSelectionRef.value) observer.observe(featureSelectionRef.value);
     if (aboutRef.value) observer.observe(aboutRef.value);
 });
+
+
 </script>
 
 <template>
@@ -51,19 +54,19 @@ onMounted(() => {
 
                 <!-- Stats Section -->
                 <div class="flex gap-8 mt-6">
-                    <div>
-                        <h2 class="text-3xl font-bold text-orange-600">60+</h2>
-                        <p class="text-gray-600 text-sm">Years of Excellence</p>
-                    </div>
-                    <div>
-                        <h2 class="text-3xl font-bold text-orange-600">650,051+</h2>
-                        <p class="text-gray-600 text-sm">Satisfied Clients</p>
-                    </div>
-                    <div>
-                        <h2 class="text-3xl font-bold text-orange-600">850,051+</h2>
-                        <p class="text-gray-600 text-sm">Completed Projects</p>
-                    </div>
-                </div>
+    <div>
+      <Counter :target="60" :duration="2000" />
+      <p class="text-gray-600 text-sm">Years of Excellence</p>
+    </div>
+    <div>
+      <Counter :target="650051" :duration="2500" />
+      <p class="text-gray-600 text-sm">Satisfied Clients</p>
+    </div>
+    <div>
+      <Counter :target="850051" :duration="2700" />
+      <p class="text-gray-600 text-sm">Completed Projects</p>
+    </div>
+  </div>
 
                 <!-- Button -->
                 <button class="mt-6 bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center hover:bg-orange-800 transition-all">
