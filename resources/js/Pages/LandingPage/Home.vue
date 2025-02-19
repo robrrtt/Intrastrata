@@ -6,20 +6,9 @@ import Footer from "@/Components/footer.vue";
 import Carousell from "@/Components/carousell.vue";
 import Products from "@/Components/Products.vue";
 import FeatureSelection from "@/Components/FeatureSelection.vue";
-import Forms from "@/Components/Forms.vue";
-import InquiryForm from "@/Components/InquiryForm.vue";
-
-
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faHouseFire, faCar, faScaleBalanced, faShip, faGear, faUserInjured);
 
 const featureSelectionRef = ref(null);
 const aboutRef = ref(null);
-const imageRef = ref(null);
-const textRef = ref(null);
 
 onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -29,60 +18,72 @@ onMounted(() => {
                 entry.target.classList.remove("opacity-0", "translate-y-10");
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.3 });
 
     if (featureSelectionRef.value) observer.observe(featureSelectionRef.value);
     if (aboutRef.value) observer.observe(aboutRef.value);
-    if (imageRef.value) observer.observe(imageRef.value);
-    if (textRef.value) observer.observe(textRef.value);
 });
 </script>
 
 <template>
     <Header />
-
     <Head title="About Us" />
 
     <div class="mx-auto max-w-screen bg-gray-50">
         <div class="overflow-hidden bg-white">
             <Carousell />
         </div>
-        <!-- Feature Selection Section with Animation -->
-        <div ref="featureSelectionRef" class="transition-all duration-1000 opacity-0 translate-y-10">
-            <FeatureSelection />
-        </div>
-        <Products class="p-2" />
-        <section class="container mx-auto px-6 py-12 ">
+        <div ref="aboutRef" class="flex flex-col md:flex-row items-center bg-white  overflow-hidden transition-all duration-1000 opacity-0 translate-y-10  p-6">
+            <!-- Image Section -->
+            <div class="md:w-1/2">
+                <img src="/img/Designer(4).jpeg" alt="About Us" class="w-full h-full object-cover rounded-lg" />
+            </div>
 
-        <div ref="aboutRef"
-            class="transition-all duration-1000 opacity-0 translate-y-10 bg-white/90 backdrop-blur-md shadow-none rounded-none">
-            <h1 class="text-2xl md:text-4xl font-bold text-slate-800 text-center mb-6">
-                About Us
-            </h1>
-            <div class="flex flex-col md:flex-row items-center">
-                <img ref="imageRef"
-                    class="w-full md:w-80 h-auto object-cover rounded-none shadow-none transition-all duration-1000 opacity-0 translate-y-10"
-                    src="/img/Designer(4).jpeg" alt="About Us">
-                <div ref="textRef" class="p-6 transition-all duration-1000 opacity-0 translate-y-10">
-                    <p class="mb-6 text-lg text-slate-700 leading-relaxed">
-                        INTRASTRATA ASSURANCE CORPORATION is one of the country's leading and oldest Non-Life Insurance
-                        Companies, established on September 8, 1959, formerly known as Overseas Insurance Company.
-                    </p>
-                    <a href="#"
-                        class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">
-                        See our guideline
-                        <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 18 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                        </svg>
-                    </a>
+            <!-- Content Section -->
+            <div class="md:w-1/2 p-8">
+                <h3 class="text-orange-500 font-semibold text-lg mb-2">— About Company —</h3>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                    Committed & Experienced in <span class="text-orange-600">Non-Life Insurance</span>
+                </h1>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    With over 60 years of experience since 1959, Intrastrata Assurance Corporation is a trusted leader in non-life insurance. Committed to excellence, we have built a strong reputation through reliable reinsurance partnerships and efficient claims processing, ensuring security and confidence for our clients.
+                </p>
+
+                <!-- Stats Section -->
+                <div class="flex gap-8 mt-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-orange-600">60+</h2>
+                        <p class="text-gray-600 text-sm">Years of Excellence</p>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-orange-600">650,051+</h2>
+                        <p class="text-gray-600 text-sm">Satisfied Clients</p>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-orange-600">850,051+</h2>
+                        <p class="text-gray-600 text-sm">Completed Projects</p>
+                    </div>
                 </div>
+
+                <!-- Button -->
+                <button class="mt-6 bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold flex items-center hover:bg-orange-800 transition-all">
+                    About us
+                    <svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+                    </svg>
+                </button>
             </div>
         </div>
-        </section>
+
+        <Products class="p-2" />
+
+        <!-- About Section with Animation -->
+               <!-- Feature Selection Section -->
+               <div ref="featureSelectionRef" class="transition-all duration-1000 opacity-0 translate-y-10">
+            <FeatureSelection />
+        </div>
     </div>
-    <!--<InquiryForm/>
-    <Forms/> -->
+
     <Footer />
 </template>
